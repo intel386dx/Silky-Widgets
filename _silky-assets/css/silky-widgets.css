@@ -7,6 +7,10 @@ code, kbd, pre {
 }
 
 /* Triangles pointing at sides, for dropdown and dropup buttons. */
+.silky-upwards-triangle,
+.silky-downwards-triangle {
+    display: inline;
+}
 .silky-upwards-triangle {
     width: 0px;
     height: 0px;
@@ -28,13 +32,11 @@ input[type=button],
 input[type=submit] {
     font-size: 12pt;
     background-color: #f0f0f0;
+    background-image: linear-gradient(180deg, #e0e0e0, #f0f0f0);
     border: 1px solid #c0c0c0;
     border-radius: 4px;
     padding: 0.25em 0.5em;
-    box-shadow: 0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset;
+    box-shadow: 0px 1px 2px #ffffff inset;
     text-align: center;
     transition-duration: 0.25s;
     display: flex;
@@ -46,21 +48,17 @@ button:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
     background-color: #fcfcfc;
-    box-shadow: 0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset, 
+    background-image: linear-gradient(180deg, #ececec, #fcfcfc);
+    box-shadow: 0px 1px 2px #ffffff inset, 
                 0px 0px 4px #f0f0f0 inset;
 }
 button:active, 
 input[type=button]:active,
 input[type=submit]:active {
     background-color: #c8c8c8;
-    box-shadow: 0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset, 
-                0px 0px 4px #f0f0f0 inset,
+    background-image: linear-gradient(0deg, #b8b8b8, #c8c8c8);
+    box-shadow: 0px -1px 2px #ffffff inset, 
+                /*0px 0px 4px #f0f0f0 inset,*/
                 0px 0px 4px #f0f0f0;
     text-shadow: 0px 0px 4px #f0f0f0;
 }
@@ -81,13 +79,19 @@ input[type=submit] img {
 }
 button.silky-giant:hover img, 
 input[type=button].silky-giant:hover img, 
-input[type=submit].silky-giant:hover img {
-    transform: scale(1.25);
+input[type=submit].silky-giant:hover img,
+.silky-buttons-group.silky-giant.silky-stacked-img button:hover img,
+.silky-buttons-group.silky-giant.silky-stacked-img input[type=button]:hover img,
+.silky-buttons-array.silky-giant.silky-stacked-img input[type=submit]:hover img {
+    transform: scale(1.125);
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
 }
 button.silky-giant:active img, 
 input[type=button].silky-giant:active img, 
-input[type=submit].silky-giant:active img {
+input[type=submit].silky-giant:active img,
+.silky-buttons-group.silky-giant.silky-stacked-img button:active img,
+.silky-buttons-group.silky-giant.silky-stacked-img input[type=button]:active img,
+.silky-buttons-array.silky-giant.silky-stacked-img input[type=submit]:active img  {
     transform: scale(0.8);
     filter: drop-shadow(0px 0px 0px transparent);
 }
@@ -175,22 +179,18 @@ input[type=button].silky-main,
 input[type=submit].silky-main {
     color: white;
     background-color: #0060c0;
+    background-image: linear-gradient(180deg, #0050b0, #0060c0);
     border-color: #285080;
-    box-shadow: 0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset;
+    box-shadow: 0px 1px 2px #0080ff inset;
 }
 button.silky-main:hover, 
 input[type=button].silky-main:hover, 
 input[type=submit].silky-main:hover {
     color: white;
     background-color: #4090d0;
+    background-image: linear-gradient(180deg, #3080c0, #4090d0);
     border-color: #285080;
-    box-shadow: 0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
+    box-shadow: 0px 1px 2px #0080ff inset,
                 0px 0px 4px #0060c0 inset;
 }
 button.silky-main:active, 
@@ -198,12 +198,9 @@ input[type=button].silky-main:active,
 input[type=submit].silky-main:active {
     color: white;
     background-color: #005888;
+    background-image: linear-gradient(180deg, #004878, #005888);
     border-color: #285080;
-    box-shadow: 0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 4px #0060c0 inset,
+    box-shadow: 0px -1px 2px #0080ff inset,
                 0px 0px 4px #0060c0;
     text-shadow: 0px 0px 4px #0060c0;
 }
@@ -219,17 +216,16 @@ input[type=button].silky-success,
 input[type=submit].silky-success {
     color: white;
     background-color: #00c000;
+    background-image: linear-gradient(180deg, #00b000, #00c000);
     border-color: #006000;
-    box-shadow: 0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset,
-                0px 0px 1px #ffffff80 inset;
+    box-shadow: 0px 1px 2px #00f000 inset;
 }
 button.silky-success:hover, 
 input[type=button].silky-success:hover, 
 input[type=submit].silky-success:hover {
     color: white;
     background-color: #40d040;
+    background-image: linear-gradient(180deg, #30c030, #40d040);
     border-color: #006000;
     box-shadow: 0px 0px 1px #ffffff80 inset,
                 0px 0px 1px #ffffff80 inset,
@@ -242,6 +238,7 @@ input[type=button].silky-success:active,
 input[type=submit].silky-success:active {
     color: white;
     background-color: #009000;
+    background-image: none;
     border-color: #006000;
     box-shadow: 0px 0px 1px #ffffff80 inset,
                 0px 0px 1px #ffffff80 inset,
@@ -347,10 +344,18 @@ input[type=submit].silky-danger:disabled {
 
 /* Buttons group */
 .silky-buttons-group {
-	display: inline-flex;
+	display: flex;
 	flex-direction: row;
 	overflow-x: auto;
 	border-radius: 4px;
+}
+.silky-buttons-group.silky-equal.silky-horizontal.silky-full-width button,
+.silky-buttons-group.silky-equal.silky-horizontal.silky-full-width input[type=button],
+.silky-buttons-group.silky-equal.silky-horizontal.silky-full-width input[type=submit],
+.silky-buttons-group.silky-equal.silky-full-width button,
+.silky-buttons-group.silky-equal.silky-full-width input[type=button],
+.silky-buttons-group.silky-equal.silky-full-width input[type=submit] {
+	flex: 1 1 0;
 }
 .silky-buttons-group.silky-horizontal {
 	flex-direction: row;
@@ -391,6 +396,7 @@ input[type=submit].silky-danger:disabled {
 	border-radius: 0px 4px 4px 0px;
 }
 .silky-buttons-group.silky-vertical {
+    display: inline-flex;
 	flex-direction: column;
 	overflow-y: auto;
 	width: auto;
