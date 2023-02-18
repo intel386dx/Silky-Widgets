@@ -1,0 +1,53 @@
+@font-face {
+    src: url("./MaterialIcons-Regular.ttf");
+    font-family: "Material Icons";
+}
+@font-face {
+    src: url("./MaterialIconsOutlined-Regular.otf");
+    font-family: "Material Icons Outlined";
+}
+@font-face {
+    src: url("./MaterialIconsRound-Regular.otf");
+    font-family: "Material Icons Round";
+}
+@font-face {
+    src: url("./MaterialIconsSharp-Regular.otf");
+    font-family: "Material Icons Sharp";
+}
+@font-face {
+    src: url("./MaterialIconsTwoTone-Regular.otf");
+    font-family: "Material Icons Two Tone";
+}
+
+/* Obtained from http://fonts.googleapis.com */
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.materal-icons-outlined {
+    font-family: "Material Icons Outlined", "Material Icons";
+}
+
+.materal-icons-round {
+    font-family: "Material Icons Round", "Material Icons";
+}
+
+.materal-icons-sharp {
+    font-family: "Material Icons Sharp", "Material Icons";
+}
+
+.materal-icons-two-tone {
+    font-family: "Material Icons Two Tone", "Material Icons";
+}
