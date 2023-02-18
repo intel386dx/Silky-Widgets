@@ -13,9 +13,9 @@ To use this styling, just copy the ``silky-widgets.css`` file, located at ``_sil
 ----------------------------------------------------------------------------------------------------
 
 To embed the styling, add:
-``<link rel="stylesheet" href="path/to/the/silky-widgets.css">``
+    <link rel="stylesheet" href="path/to/the/silky-widgets.css">
 For advanced widgets, add the script as well:
-``<script src="path/to/the/silkt-widgets.js" defer async></script>``
+    <script src="path/to/the/silkt-widgets.js" defer async></script>
 
 ## 3. What's Included
 
