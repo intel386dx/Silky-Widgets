@@ -3,7 +3,7 @@ Silky Widgets
 
 ## 1. Introduction
 
-Silky Widgets is an array of website styling that applies directly into HTML controls like ``<button>``, ``<input>``, etc.
+Silky Widgets is an array of website styling and widgets that applies directly into HTML controls like ``<button>``, ``<input>``, etc.
 We make sure that it pairs well with [FatCow's web icons](https://www.fatcow.com/free-icons).
 
 ## 2. Usage
