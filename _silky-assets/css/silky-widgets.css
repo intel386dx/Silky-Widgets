@@ -47,7 +47,8 @@ input[type=submit] {
     border: 1px solid #c0c0c0;
     border-radius: 4px;
     padding: 0.25em 0.5em;
-    box-shadow: 0px 1px 2px #ffffff inset;
+    box-shadow: 0px 1px 2px #ffffff inset,
+                0px 2px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
     transition-duration: 0.25s;
     display: flex;
@@ -61,7 +62,8 @@ input[type=submit]:hover {
     background-color: #fcfcfc;
     background-image: linear-gradient(180deg, #ececec, #fcfcfc);
     box-shadow: 0px 1px 2px #ffffff inset, 
-                0px 0px 4px #f0f0f0 inset;
+                0px 0px 4px #f0f0f0 inset,
+                0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 button:active,
 button.silky-toggle[value="1"],
@@ -72,7 +74,8 @@ input[type=submit]:active {
     background-image: linear-gradient(0deg, #b8b8b8, #c8c8c8);
     box-shadow: 0px -1px 2px #ffffff inset, 
                 /*0px 0px 4px #f0f0f0 inset,*/
-                0px 0px 4px #f0f0f0;
+                0px 0px 4px #f0f0f0,
+                0px 2px 4px rgba(0, 0, 0, 0.25);
     text-shadow: 0px 0px 4px #f0f0f0;
 }
 button.silky-toggle[value="1"]:hover,
@@ -212,7 +215,8 @@ input[type=submit].silky-main {
     background-color: #0060c0;
     background-image: linear-gradient(180deg, #0050b0, #0060c0);
     border-color: #285080;
-    box-shadow: 0px 1px 2px #0080ff inset;
+    box-shadow: 0px 1px 2px #0080ff inset,
+                0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 button.silky-main:hover, 
 input[type=button].silky-main:hover, 
@@ -222,7 +226,8 @@ input[type=submit].silky-main:hover {
     background-image: linear-gradient(180deg, #3080c0, #4090d0);
     border-color: #285080;
     box-shadow: 0px 1px 2px #0080ff inset,
-                0px 0px 4px #0060c0 inset;
+                0px 0px 4px #0060c0 inset
+                0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 button.silky-main:active, 
 button.silky-main.silky-toggle[value="1"],
@@ -234,7 +239,8 @@ input[type=submit].silky-main:active {
     background-image: linear-gradient(180deg, #004878, #005888);
     border-color: #285080;
     box-shadow: 0px -1px 2px #0080ff inset,
-                0px 0px 4px #0060c0;
+                0px 0px 4px #0060c0
+                0px 2px 4px rgba(0, 0, 0, 0.25);
     text-shadow: 0px 0px 4px #0060c0;
 }
 button.silky-main:disabled, 
@@ -426,11 +432,11 @@ select.silky-giant,
 	max-width: 100%;
 }
 .silky-buttons-group.silky-horizontal > :first-child,
-.silky-buttons-group.silky-horizontal > input:first-child {
+.silky-buttons-group.silky-horizontal > select:first-child {
 	border-radius: 4px 0px 0px 4px !important;
 }
 .silky-buttons-group.silky-horizontal > :last-child,
-.silky-buttons-group.silky-horizontal > input:last-child {
+.silky-buttons-group.silky-horizontal > select:last-child {
 	border-radius: 0px 4px 4px 0px !important;
 }
 .silky-buttons-group.silky-vertical {
