@@ -18,14 +18,15 @@ To embed the styling, add:
 ```
 For advanced widgets, add the script as well:
 ```
-<script src="path/to/the/silkt-widgets.js" defer async></script>
+<script src="path/to/the/silky-widgets.js" defer async></script>
 ```
 
 ## 3. What's Included
 
 Silky Widgets includes:
 
-1. [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto) and [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono?query=roboto) in TTF format. Made by Christian Robertson.
-2. FamFamFam's Silk Icons [(github)](https://github.com/legacy-icons/famfamfam-silk) and Flags [(github)](https://github.com/legacy-icons/famfamfam-flags) in 16x16 PNG files.
-3. [FatCow's web icons](https://www.fatcow.com/free-icons), in multi-size ICO files.
+1. [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto) and [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono?query=roboto) in TTF format. Made by Christian Robertson. Both are licensed under [the Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
+2. FamFamFam's Silk Icons [(github)](https://github.com/legacy-icons/famfamfam-silk) and Flags [(github)](https://github.com/legacy-icons/famfamfam-flags) in 16x16 PNG files. Licensed under the [CC-BY 2.5](http://creativecommons.org/licenses/by/2.5/) license, but the Flags icons other than the ``gg`` add-on icon are public domain.
+3. [FatCow's web icons](https://www.fatcow.com/free-icons), in multi-size ICO files. Licensed under the [CC-BY 3.0](http://creativecommons.org/licenses/by/3.0/us/). Some rights reserved.
 4. [jQuery](https://www.jquery.com/) [3.6.3](https://code.jquery.com/jquery-3.6.3.js) (uncompressed).
+5. Material Icons in 5 (five) styles. Licensed under [the Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
