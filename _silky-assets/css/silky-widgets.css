@@ -1,0 +1,407 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+}
+code, kbd, pre {
+    font-family: "Roboto Mono", Consolas, "Lucida Console", monospace;
+}
+
+/* Triangles pointing at sides, for dropdown and dropup buttons. */
+.silky-upwards-triangle {
+    width: 0px;
+    height: 0px;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-bottom: 0.5em solid;
+}
+.silky-downwards-triangle {
+    width: 0px;
+    height: 0px;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 0.5em solid;
+}
+
+/* Normal button (bright silver) */
+button, 
+input[type=button], 
+input[type=submit] {
+    font-size: 12pt;
+    background-color: #f0f0f0;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    padding: 0.25em 0.5em;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset;
+    text-align: center;
+    transition-duration: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+button:hover, 
+input[type=button]:hover,
+input[type=submit]:hover {
+    background-color: #fcfcfc;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset, 
+                0px 0px 4px #f0f0f0 inset;
+}
+button:active, 
+input[type=button]:active,
+input[type=submit]:active {
+    background-color: #c8c8c8;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset, 
+                0px 0px 4px #f0f0f0 inset,
+                0px 0px 4px #f0f0f0;
+    text-shadow: 0px 0px 4px #f0f0f0;
+}
+button:disabled, 
+input[type=button]:disabled,
+input[type=submit]:disabled {
+    color: #606060;
+    pointer-events: none;
+}
+button img, 
+input[type=button] img, 
+input[type=submit] img {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.25em;
+    vertical-align: middle;
+    transition-duration: 0.25s;
+}
+button.silky-giant:hover img, 
+input[type=button].silky-giant:hover img, 
+input[type=submit].silky-giant:hover img {
+    transform: scale(1.25);
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+button.silky-giant:active img, 
+input[type=button].silky-giant:active img, 
+input[type=submit].silky-giant:active img {
+    transform: scale(0.8);
+    filter: drop-shadow(0px 0px 0px transparent);
+}
+button:disabled img, 
+input[type=button]:disabled img, 
+input[type=submit]:disabled img {
+    filter: grayscale();
+    opacity: 0.75;
+}
+button.silky-giant, 
+input[type=button].silky-giant, 
+input[type=submit].silky-giant,
+.silky-buttons-group.silky-giant button,
+.silky-buttons-group.silky-giant input[type=button],
+.silky-buttons-group.silky-giant input[type=submit] {
+    font-size: 16pt;
+}
+button.silky-giant img, 
+input[type=button].silky-giant img, 
+input[type=submit].silky-giant img,
+.silky-buttons-group.silky-giant button img,
+.silky-buttons-group.silky-giant input[type=button] img,
+.silky-buttons-group.silky-giant input[type=submit] img {
+    width: 20px;
+    height: 20px;
+}
+button.silky-little, 
+input[type=button].silky-little, 
+input[type=submit].silky-little,
+.silky-buttons-group.silky-little button,
+.silky-buttons-group.silky-little input[type=button],
+.silky-buttons-group.silky-little input[type=submit] {
+    font-size: 9pt;
+}
+button.silky-little img, 
+input[type=button].silky-little img, 
+input[type=submit].silky-little img,
+.silky-buttons-group.silky-little button img,
+.silky-buttons-group.silky-little input[type=button] img,
+.silky-buttons-array.silky-little input[type=submit] img {
+    width: 12px;
+    height: 12px;
+}
+
+/* A button with the image placed on top. */
+button.silky-stacked-img, 
+input[type=button].silky-stacked-img, 
+input[type=submit].silky-stacked-img,
+.silky-buttons-group.silky-stacked-img button,
+.silky-buttons-group.silky-stacked-img input[type=button],
+.silky-buttons-array.silky-stacked-img input[type=submit] {
+    flex-direction: column;
+}
+button.silky-stacked-img img, 
+input[type=button].silky-stacked-img img, 
+input[type=submit].silky-stacked-img img,
+.silky-buttons-group.silky-stacked-img button img,
+.silky-buttons-group.silky-stacked-img input[type=button] img,
+.silky-buttons-array.silky-stacked-img input[type=submit] img {
+    width: 32px;
+    height: 32px;
+}
+button.silky-little.silky-stacked-img img, 
+input[type=button].silky-little.silky-stacked-img img, 
+input[type=submit].silky-little.silky-stacked-img img,
+.silky-buttons-group.silky-little.silky-stacked-img button img,
+.silky-buttons-group.silky-little.silky-stacked-img input[type=button] img,
+.silky-buttons-array.silky-little.silky-stacked-img input[type=submit] img {
+    width: 20px;
+    height: 20px;
+}
+button.silky-giant.silky-stacked-img img, 
+input[type=button].silky-giant.silky-stacked-img img, 
+input[type=submit].silky-giant.silky-stacked-img img,
+.silky-buttons-group.silky-giant.silky-stacked-img button img,
+.silky-buttons-group.silky-giant.silky-stacked-img input[type=button] img,
+.silky-buttons-array.silky-giant.silky-stacked-img input[type=submit] img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Main (blue) */
+button.silky-main, 
+input[type=button].silky-main, 
+input[type=submit].silky-main {
+    color: white;
+    background-color: #0060c0;
+    border-color: #285080;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset;
+}
+button.silky-main:hover, 
+input[type=button].silky-main:hover, 
+input[type=submit].silky-main:hover {
+    color: white;
+    background-color: #4090d0;
+    border-color: #285080;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 4px #0060c0 inset;
+}
+button.silky-main:active, 
+input[type=button].silky-main:active, 
+input[type=submit].silky-main:active {
+    color: white;
+    background-color: #005888;
+    border-color: #285080;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 4px #0060c0 inset,
+                0px 0px 4px #0060c0;
+    text-shadow: 0px 0px 4px #0060c0;
+}
+button.silky-main:disabled, 
+input[type=button].silky-main:disabled, 
+input[type=submit].silky-main:disabled {
+    color: #c0e8f0
+}
+
+/* Success (green) */
+button.silky-success, 
+input[type=button].silky-success, 
+input[type=submit].silky-success {
+    color: white;
+    background-color: #00c000;
+    border-color: #006000;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset;
+}
+button.silky-success:hover, 
+input[type=button].silky-success:hover, 
+input[type=submit].silky-success:hover {
+    color: white;
+    background-color: #40d040;
+    border-color: #006000;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 4px #00c000 inset;
+}
+button.silky-success:active, 
+input[type=button].silky-success:active, 
+input[type=submit].silky-success:active {
+    color: white;
+    background-color: #009000;
+    border-color: #006000;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 4px #00c000 inset,
+                0px 0px 4px #00c000;
+    text-shadow: 0px 0px 4px #00c000;
+}
+button.silky-success:disabled, 
+input[type=button].silky-success:disabled, 
+input[type=submit].silky-success:disabled {
+    color: #c0f0c0
+}
+
+/* Warn (yellow) */
+button.silky-warn, 
+input[type=button].silky-warn, 
+input[type=submit].silky-warn {
+    color: black;
+    background-color: #f0e020;
+    border-color: #787010;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset;
+}
+button.silky-warn:hover, 
+input[type=button].silky-warn:hover, 
+input[type=submit].silky-warn:hover {
+    color: black;
+    background-color: #f8f890;
+    border-color: #787010;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 4px #f0e020 inset;
+}
+button.silky-warn:active, 
+input[type=button].silky-warn:active, 
+input[type=submit].silky-warn:active {
+    color: black;
+    background-color: #aca818;
+    border-color: #787010;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 4px #f0e020 inset,
+                0px 0px 4px #f0e020;
+    text-shadow: 0px 0px 4px #f0e020;
+}
+button.silky-warn:disabled, 
+input[type=button].silky-warn:disabled, 
+input[type=submit].silky-warn:disabled {
+    color: #787010
+}
+
+/* Danger (red) */
+button.silky-danger, 
+input[type=button].silky-danger, 
+input[type=submit].silky-danger {
+    color: white;
+    background-color: #e00000;
+    border-color: #700000;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset;
+}
+button.silky-danger:hover, 
+input[type=button].silky-danger:hover, 
+input[type=submit].silky-danger:hover {
+    color: white;
+    background-color: #ec6060;
+    border-color: #700000;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 4px #e00000 inset;
+}
+button.silky-danger:active, 
+input[type=button].silky-danger:active, 
+input[type=submit].silky-danger:active {
+    color: white;
+    background-color: #a80000;
+    border-color: #700000;
+    box-shadow: 0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 1px #ffffff80 inset,
+                0px 0px 4px #e00000 inset,
+                0px 0px 4px #e00000;
+    text-shadow: 0px 0px 4px #e00000;
+}
+button.silky-danger:disabled, 
+input[type=button].silky-danger:disabled, 
+input[type=submit].silky-danger:disabled {
+    color: #f8c0c0
+}
+
+/* Buttons group */
+.silky-buttons-group {
+	display: inline-flex;
+	flex-direction: row;
+	overflow-x: auto;
+	border-radius: 4px;
+}
+.silky-buttons-group.silky-horizontal {
+	flex-direction: row;
+	overflow-x: auto;
+	max-width: 100%;
+}
+.silky-buttons-group.silky-horizontal.silky-full-width,
+.silky-buttons-group.silky-full-width {
+	display: flex;
+	min-width: 100%;
+}
+.silky-buttons-group.silky-horizontal.silky-full-width > button,
+.silky-buttons-group.silky-horizontal.silky-full-width > input[type=button],
+.silky-buttons-group.silky-horizontal.silky-full-width > input[type=submit],
+.silky-buttons-group.silky-full-width > button,
+.silky-buttons-group.silky-full-width > input[type=button],
+.silky-buttons-group.silky-full-width > input[type=submit] {
+	flex-shrink: 0;
+	flex-grow: 1;
+}
+.silky-buttons-group > button,
+.silky-buttons-group > input[type=button],
+.silky-buttons-group > input[type=submit] {
+	border-radius: 0px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	width: auto;
+	max-width: 100%;
+}
+.silky-buttons-group.silky-horizontal > button:first-child,
+.silky-buttons-group.silky-horizontal > input[type=button]:first-child,
+.silky-buttons-group.silky-horizontal > input[type=submit]:first-child {
+	border-radius: 4px 0px 0px 4px;
+}
+.silky-buttons-group.silky-horizontal > button:last-child,
+.silky-buttons-group.silky-horizontal > input[type=button]:last-child,
+.silky-buttons-group.silky-horizontal > input[type=submit]:last-child {
+	border-radius: 0px 4px 4px 0px;
+}
+.silky-buttons-group.silky-vertical {
+	flex-direction: column;
+	overflow-y: auto;
+	width: auto;
+}
+.silky-buttons-group.silky-vertical > button:first-child,
+.silky-buttons-group.silky-vertical > input[type=button]:first-child,
+.silky-buttons-group.silky-vertical > input[type=submit]:first-child {
+	border-radius: 4px 4px 0px 0px;
+}
+.silky-buttons-group.silky-vertical > button:last-child,
+.silky-buttons-group.silky-vertical > input[type=button]:last-child,
+.silky-buttons-group.silky-vertical > input[type=submit]:last-child {
+	border-radius: 0px 0px 4px 4px;
+}
